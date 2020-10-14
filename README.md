@@ -35,8 +35,8 @@ By the end of the assignment you should be able to understand
 1. On running npm run serve, following apis would be available for your use:
 2. To authenticate user - POST - http://localhost:3000/auth/v1 - expecting data - { username, password }
 3. To check if user is authenticated - POST - http://localhost:3000/auth/v1/isAuthenticated - expecting header - { 'Authorization', Bearer ${token} }
-4. To get notes - GET - http://localhost:3000/api/v1/news - expecting header - { 'Authorization', Bearer ${token} }
-5. To add a note - POST - http://localhost:3000/api/v1/news - expecting header - { 'Authorization', Bearer ${token} } and data - { note }
+4. To get news - GET - http://localhost:3000/api/v1/news - expecting header - { 'Authorization', Bearer ${token} }
+5. To add a news - POST - http://localhost:3000/api/v1/news - expecting header - { 'Authorization', Bearer ${token} } and data - { news }
 
 ### Assignment:	
 
