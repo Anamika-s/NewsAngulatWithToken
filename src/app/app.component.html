@@ -1,2 +1,39 @@
 <!-- the app-component should load header, and footer components -->
 <!-- the component should also provide outlet for routing dashboard and login components-->
+
+<!-- HeaderComponent to be displayed as part of AppComponent -->
+<app-header [title]="title"></app-header>
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+
+      <mat-nav-list>
+      <a mat-list-item href="/login">Login</a>
+      
+      <a mat-list-item href="/dashboard">dashboard</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>        
+    </mat-toolbar>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- Another component to be rendered based on route -->
+
+<router-outlet></router-outlet>
+<app-footer></app-footer>

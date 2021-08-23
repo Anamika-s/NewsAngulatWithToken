@@ -4,6 +4,7 @@ function generateApp(inputApp) {
   const app = inputApp || express();
 
   app.use(function(req, res, next) {
+    console.log("ITS ALLOWED");
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");

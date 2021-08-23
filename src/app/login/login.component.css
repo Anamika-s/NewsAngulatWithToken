@@ -1,1 +1,13 @@
 /* define style rules for login component elements */
+.login-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-form
+{   
+   margin: 10% auto;
+   width: 20vw;
+}
