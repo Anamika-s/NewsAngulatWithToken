@@ -1,42 +1,24 @@
-<!-- <div class="login-c-form-wrapper">
-  <h3>Existing Users... Sign In</h3>
-  <form >
-  <mat-form-field>
+<div class="container">
+  <div class="div1 login-c-form-wrapper d-flex flex-column">
+    <h3 style="text-align: center;">Sign In</h3>
+    <form >
+      <mat-form-field class="example-full-width d-flex justify-content-center" appearance="fill">
+        
+        <input type="text" [formControl]="username" matInput placeholder="user name" class="username">
+    </mat-form-field>
   
-  </mat-form-field>
+    <mat-form-field class="example-full-width d-flex justify-content-center" appearance="fill">
+     
+      <input type="password" [formControl]="password" matInput placeholder="password" class="password">
+    </mat-form-field>
+    <div class="d-flex justify-content-center">
+      <button mat-raised-button color="primary" type="submit" mat-button (click)="loginSubmit()" [disabled]="!username.valid || !password.valid">Submit</button>
+    </div>
+    <div class="container" style="text-align: center; color: red;">
+      <strong *ngIf="submitMessage" class="error-message">{{submitMessage}}</strong>
+    </div>
+    
+  </form>
 
-  <mat-form-field>
-  
-  </mat-form-field>
-  
-  <button matButton type="submit" mat-button>Submit</button>
-  
-</form>
-</div> -->
-
-<div class="login-container">
-  <div class="login-form">
-  <div class="row justify-content-start">
-    <div class="col-4">
-      <label>Username:
-        <input class="username" matInput [formControl]='username'>
-      </label>
-    </div>
   </div>
-  <div class="row justify-content-start">
-    <div class="col-4">
-      <label>Password:
-        <input class="password" matInput type = 'password' [formControl]='password'>
-      </label>
-    </div>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-4">
-      <button class="btn btn-primary" (click)="loginSubmit()">Submit</button>
-    </div>
-  </div>
-</div>
-</div>
-<div style="text-align:center">
-  <label class="error-message">{{ submitMessage }}</label>
 </div>

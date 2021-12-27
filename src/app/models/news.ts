@@ -1,12 +1,11 @@
 export class News {
-// declare properties for news item    
-public author: string;
-public title: string;
-public description: string;
-public url: string;
-public urlToImage: string;
-public publishedAt:string;
-public content:string;
-public id : number;
-
+// declare properties for news item 
+    id: number;
+    author: string;
+    title: string;
+    content: string;
+    description: string;
+    publishedAt: string;
+    url: string;
+    urlToImage: string;   
 }
