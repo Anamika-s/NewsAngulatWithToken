@@ -34,6 +34,7 @@ export class AuthenticationService {
     // this method should validate authenticity of a user - accepts the token string 
     // and returns Promise of authenticated status of user with boolean value
      
+    
       return this.http.post(this.authenticationUrl + 'isAuthenticated', {}, {
         headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
       }).pipe(map(reponse => reponse['isAuthenticated'])).toPromise();
