@@ -28,6 +28,7 @@ export class LoginComponent {
     console.log(this.loginData)
     this._authserve.authenticateUser(this.loginData).subscribe(res=>{
       this._authserve.setBearerToken(res["token"]);
+
       this._route.toDashboard();                         
     },error => {
       if (error.status === 403){

@@ -29,6 +29,7 @@ export class AuthenticationService {
     // this method should clear the token stored in local storage
     localStorage.removeItem("bearerToken")
   }
+  
 
   isUserAuthenticated(token:string):Promise<any>{
     // this method should validate authenticity of a user - accepts the token string 
